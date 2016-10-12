@@ -2,7 +2,7 @@
 #include <Arduino.h>
 
 //Global Variables
-const byte BUTTON = 2 ; // our button pin
+const byte BUTTON = 2; // our button pin
 const byte SENSOR = 3;
 const byte CYLINDERBIG = 4; // CYLINDERBIG (built-in on Uno)
 const byte CYLINDERSMALL = 5;
@@ -10,15 +10,14 @@ const byte LEDBIG = 6;
 const byte ledSmall = 7;
 
 byte comando = 0;
-
 unsigned long buttonPushedMillis; // when button was released
 unsigned long relayTurnedOnAt; // when CYLINDERBIG was turned on
 unsigned long turnOnDelay = 000; // wait to turn on CYLINDERBIG
 unsigned long turnOnDelay1 = 3000;
 unsigned long turnOnLedB = 000;
 unsigned long turnOnLedS = 3000;
-unsigned long turnOffDelay = 9000; // turn off CYLINDERBIG after this
-unsigned long turnOffDelay1 = 7000;
+unsigned long turnOffDelay = 899000; // turn off CYLINDERBIG after this
+unsigned long turnOffDelay1 = 897000;
 unsigned long turnOffLedB = 000;
 unsigned long turnOffLedS = 7000;
 
@@ -40,7 +39,7 @@ void setup() {
 	pinMode(ledSmall, OUTPUT);
 	digitalWrite(CYLINDERBIG, HIGH);
 	digitalWrite(CYLINDERSMALL, HIGH);
-	digitalWrite(LEDBIG, LOW);
+	digitalWrite(LEDBIG, HIGH);
 	digitalWrite(ledSmall, HIGH);
 }
 
